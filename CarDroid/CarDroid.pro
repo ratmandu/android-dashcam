@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick widgets network sensors multimedia
+QT += qml quick widgets network sensors multimedia positioning
 
 SOURCES += main.cpp \
     imageclient.cpp \

@@ -9,6 +9,12 @@ ApplicationWindow {
   color: "black";
   title: qsTr("CarDroid")
 
+
+
+//  MapView {
+//    anchors.centerIn: parent
+//  }
+
   CameraView {
     anchors.left: parent.left
   }
