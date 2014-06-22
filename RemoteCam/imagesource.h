@@ -9,9 +9,12 @@
 #include <QCamera>
 #include <QCameraFocus>
 #include <QCameraExposure>
+#include <QMediaRecorder>
 #include <QVideoProbe>
 #include <QBuffer>
 #include <QTimer>
+#include <QUrl>
+#include <QDateTime>
 
 #include "qandroidmultimediautils.h"
 
@@ -41,15 +44,18 @@ private:
   QCamera *camera;
   QCameraFocus *focus;
   QCameraExposure *exposure;
+  QMediaRecorder *recorder;
   QVideoProbe *probe;
   int counter;
   QTimer frameTimer;
   bool sendFrame;
+  bool startRecording;
 
 signals:
   void newFrame(QImage frame);
 
 public slots:
+  void newVideo();
   void onNewVideoContentReceived(const QVideoFrame &frame)
   {
     if (m_surface)

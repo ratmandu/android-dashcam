@@ -18,13 +18,14 @@ void ImageServer::newFrame(QImage img)
 //  if (!started)
 //    return;
 
-  qDebug() << "Server received image";
+//  qDebug() << "Server received image";
   if (clients.count() == 0)
     return;
 
   QByteArray ba;
   QBuffer buf(&ba);
-  img.save(&buf, "JPG", 90);
+  img.save(&buf, "JPG", 80);
+  qDebug() << ba.size();
   ba.append("Jiggle");
   //  qint64 length = sizeof(quint32) + buf.data().size();
 

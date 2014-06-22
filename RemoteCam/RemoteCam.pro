@@ -5,7 +5,9 @@ QT += qml quick multimedia positioning network sensors
 SOURCES += main.cpp \
     imagesource.cpp \
     qandroidmultimediautils.cpp \
-    imageserver.cpp
+    imageserver.cpp \
+    sensorlogger.cpp \
+    spacechecker.cpp
 
 RESOURCES += qml.qrc
 
@@ -23,4 +25,6 @@ OTHER_FILES += \
 HEADERS += \
     imagesource.h \
     qandroidmultimediautils.h \
-    imageserver.h
+    imageserver.h \
+    sensorlogger.h \
+    spacechecker.h
